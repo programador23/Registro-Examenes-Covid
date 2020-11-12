@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/imagen_pacie_lv"
+    android:layout_weight="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></ImageView>
+
+    <TextView
+        android:id="@+id/nombre_paciente_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_paci"
+
+        android:layout_weight="1"
+        android:textSize="@dimen/tamaño_letra_list"></TextView>
+
+
+
+</LinearLayout>

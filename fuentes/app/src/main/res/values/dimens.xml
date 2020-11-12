@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="imagenLogo">100dp</dimen>
+    <dimen name="tituloapp_size">40sp</dimen>
+    <dimen name="margin_left_titulo_app">40dp</dimen>
+    <dimen name="margin_left_paci">30dp</dimen>
+    <dimen name="tamaño_letra_list">30dp</dimen>
+    <dimen name="margin_top_paciente">15dp</dimen>
+    <dimen name="tamaño_opcion">25dp</dimen>
+    <dimen name="margin_boton_float">16dp</dimen>
+</resources>

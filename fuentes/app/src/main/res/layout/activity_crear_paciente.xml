@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/toolbar"
+        ></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+    android:textSize="@dimen/tamaño_letra_list"
+    android:gravity="center"
+    android:text="Nombre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</TextView>
+    <EditText
+        android:id="@+id/nombre_paciente_txt_cr"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"></EditText>
+    <TextView
+        android:textSize="@dimen/tamaño_letra_list"
+        android:gravity="center"
+        android:text="Apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/apellido_paciente_txt_cr"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"></EditText>
+    <TextView
+
+        android:textSize="@dimen/tamaño_letra_list"
+        android:gravity="center"
+        android:text="RUT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:inputType="number"
+        android:id="@+id/rut_paciente_txt_cr"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"></EditText>
+    <TextView
+        android:id="@+id/fecha"
+        android:textSize="@dimen/tamaño_letra_list"
+        android:gravity="center"
+        android:text="Fecha de Examen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Abrir Calendario"
+        android:textAllCaps="false"
+        android:onClick="abrirCalendario"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+           android:text="Area de trabajo:"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamaño_opcion"
+            ></TextView>
+
+        <Spinner
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:id="@+id/idSpinner_area_trabajo"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/tamaño_opcion"
+            android:layout_weight="1"
+            android:text="Presenta Sintomas Covid:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/texto_switch"
+            android:text="No"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            ></TextView>
+
+        <Switch
+            android:id="@+id/idSwitch_presenta_sintomas"
+            android:layout_width="match_parent"
+            android:text="No"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:onClick="switch_sintomas"
+            android:textSize="@dimen/tamaño_opcion"></Switch>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:text="Temperatura:"
+            android:textSize="@dimen/tamaño_opcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <EditText
+            android:layout_weight="1"
+            android:inputType="number"
+            android:id="@+id/tempertura_paciente_txt_cr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/tamaño_opcion"
+            android:layout_weight="1"
+            android:text="Presenta Tos:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:id="@+id/texto_switch_Tos"
+            android:text="No"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            ></TextView>
+        <Switch
+            android:id="@+id/idSwitch_presenta_tos"
+            android:textSize="@dimen/tamaño_opcion"
+            android:text="No"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:onClick="switch_tos"
+            android:layout_height="wrap_content"></Switch>
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Presión Arterial:"
+                    android:textSize="@dimen/tamaño_opcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <EditText
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:id="@+id/presion_paciente_txt_cr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+<Button
+    android:id="@+id/registrarBtn"
+    android:background="@color/primary_light"
+    android:layout_width="match_parent"
+    android:text="Registrar"
+    android:layout_height="wrap_content"></Button>
+
+
+        </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
